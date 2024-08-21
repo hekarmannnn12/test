@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clickjacking Test</title>
@@ -17,27 +17,33 @@
         
         .redirect-button {
             position: absolute;
-            top: 50%; 
-            left: 50%; 
+            top: 73%; 
+            left: 70%; 
             transform: translate(-50%, -50%);
             z-index: 2; 
             padding: 15px; 
-            background-color: rgba(255, 255, 255, 0); /* Fully transparent background */
-            color: rgba(255, 255, 255, 0); /* Fully transparent text */
-            border: none;
+            background-color: rgba(255, 255, 255, 0); 
+            color: rgba(255, 255, 255, 0); 
             cursor: pointer;
             width: 27%; 
             text-align: center;
+            opacity: 0; 
         }
        
         .redirect-button:hover {
-            background-color: rgba(255, 255, 255, 0.2); /* Light white hover effect */
+            background-color: rgba(255, 255, 255, 0.2); /
         }
     </style>
 </head>
 <body>
-    
     <button class="redirect-button" onclick="window.location.href='https://www.cybersecuree.tech';">Click Me</button>
-    <iframe src="https://www.nba.com/account/sign-in" title="Target Website"></iframe>
+    <iframe src="https://jeevee.com" title="Target Website"></iframe>
 </body>
 </html>
+
+
+
+
+
+
+<!-- add_header X-Frame-Options SAMEORIGIN always; -->
